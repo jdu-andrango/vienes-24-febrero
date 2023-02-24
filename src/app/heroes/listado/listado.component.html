@@ -1,0 +1,78 @@
+<p>listado heroes</p>
+
+<!--
+<ul>
+  <li>{{heroes[0]}} </li>
+  <li>{{heroes[1]}} </li>
+  <li>{{heroes[2]}} </li>
+  <li>{{heroes[3]}} </li>
+</ul>
+
+-->
+
+<ul>
+  <li *ngFor="let heroe of heroes  ">
+
+    {{heroe}}
+
+  </li>
+</ul>
+
+<div *ngIf="heroeBorrado; else noBorrado ">
+
+  <h2>heroe Borrado</h2>
+  <span>{{heroeBorrado}}</span>
+
+</div>
+
+
+
+<!--
+borrar antes de usar ngTemplate
+
+<div *ngIf="!heroeBorrado ">
+
+  <h2>no a borrado nada</h2>
+
+</div>
+-->
+
+
+<!-- Borrar con template id con una referencia local-->
+
+
+
+<ng-template #noBorrado>
+
+  <h1>no a borrado nada nuevo</h1>
+
+</ng-template>
+
+
+<button (click)="borrarHeroe()">
+  borrar heroe
+</button>
+
+<ul>
+  <li *ngFor="let recorridoNumeros of numeros">
+
+    {{recorridoNumeros}}
+
+  </li>
+</ul>
+
+
+<ul>
+  <li *ngFor=" let recorridoColores of colores ">
+    {{recorridoColores}}
+  </li>
+</ul>
+
+
+
+
+
+
+
+
+<!--directrivas estructurales para manipular el doom -->
